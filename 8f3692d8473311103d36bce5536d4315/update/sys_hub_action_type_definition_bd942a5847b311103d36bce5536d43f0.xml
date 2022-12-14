@@ -28,7 +28,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bd942a5847b311103d36bce5536d43f0</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Get Geographic Data from IP</sys_name>
         <sys_overrides/>
         <sys_package display_value="IPInfo Spoke" source="x_718762_ipinfo_sp">8f3692d8473311103d36bce5536d4315</sys_package>
@@ -36,7 +36,7 @@
         <sys_scope display_value="IPInfo Spoke">8f3692d8473311103d36bce5536d4315</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_bd942a5847b311103d36bce5536d43f0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-12 11:51:04</sys_updated_on>
+        <sys_updated_on>2022-12-14 07:27:24</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -497,7 +497,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,isLocal=true,uiType=password2</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,isLocal=true,uiType=password2,uiTypeLabel=Password (2 Way Encrypted),uiUniqueId=7f56e619-cc19-4725-86e6-15f0df02038c</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -537,7 +537,7 @@
         <model_table>sys_hub_step_instance</model_table>
         <name>var__m_sys_hub_step_ext_output_1015a29847b311103d36bce5536d4317</name>
         <next_element/>
-        <order>8</order>
+        <order>7</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
@@ -555,14 +555,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-12 11:51:03</sys_created_on>
         <sys_id>8b331314477711103d36bce5536d4312</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="IPInfo Spoke">8f3692d8473311103d36bce5536d4315</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-12 11:51:03</sys_updated_on>
+        <sys_updated_on>2022-12-14 07:27:23</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -616,10 +616,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-12 08:50:36</sys_created_on>
         <sys_id>e3e96e9c47b311103d36bce5536d4398</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="IPInfo Spoke">8f3692d8473311103d36bce5536d4315</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-12 08:50:36</sys_updated_on>
+        <sys_updated_on>2022-12-14 07:27:24</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e3e96e9c47b311103d36bce5536d4398"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -630,9 +630,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-12 08:50:36</sys_created_on>
         <sys_id>a3e96e9c47b311103d36bce5536d43ce</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-12 08:50:36</sys_updated_on>
+        <sys_updated_on>2022-12-14 07:27:24</sys_updated_on>
         <value>(function execute(inputs, outputs) {
     // Only parse the response body if the status code is 200  
       if (inputs.status_code == '200'){
@@ -640,7 +640,7 @@
             // Parse the response_body input variable and save parsed object as responseBody
             var responseBody = JSON.parse(inputs.response_body);
       
-            // Map the parsed responseBody values to output variables
+            // Map the parsed responseBody values to output variables for Testing 
             outputs.hostname = responseBody.hostname;
       outputs.city = responseBody.city;
       outputs.region = responseBody.region;
@@ -651,7 +651,8 @@
             outputs.latitude = locArray[0];
             outputs.longitude = locArray[1];
       }
-})(inputs, outputs);</value>
+})(inputs, outputs);
+</value>
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
